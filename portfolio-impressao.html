@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Portfólio — Marcelo Henrique Puschnick · CNPEM 430554</title>
+<style>
+  @page { size: A4 landscape; margin: 11mm 13mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10pt; line-height: 1.48; color: #1b1b1b; }
+  h1 { font-size: 20pt; line-height: 1.24; margin: 4mm 0 3mm; }
+  h2 {
+    font-size: 13pt; color: #8a6229; border-bottom: 1.5px solid #8a6229; padding-bottom: 2px;
+    margin: 0 0 4mm; text-transform: uppercase; letter-spacing: .05em;
+    page-break-before: always; page-break-after: avoid; break-after: avoid;
+  }
+  h3 { font-size: 10.5pt; margin: 3.5mm 0 1.2mm; page-break-after: avoid; color: #000; }
+  p { margin-bottom: 2.6mm; }
+  strong { color: #000; }
+  ul { margin: 1.5mm 0 2.5mm 4.5mm; }
+  li { margin-bottom: 1mm; font-size: 9.6pt; }
+
+  /* CAPA — lado a lado */
+  .capa { display: flex; gap: 12mm; align-items: flex-start; page-break-after: always; break-after: page; }
+  .capa .foto { flex: 0 0 58mm; text-align: center; }
+  .capa .foto img { width: 52mm; height: 52mm; border-radius: 50%; border: 2.5px solid #8a6229; object-fit: cover; }
+  .capa .foto .contato { font-size: 8.8pt; color: #555; margin-top: 4mm; line-height: 1.5; }
+  .capa .txt { flex: 1; }
+  .badge { display: inline-block; background: #fdf6ec; border: 1px solid #e2d5c2; color: #8a6229; font-size: 8.3pt; padding: 3px 10px; border-radius: 12px; margin-bottom: 4mm; letter-spacing: .04em; text-transform: uppercase; font-weight: 600; }
+  .capa h1 { font-size: 21pt; }
+  .stats { display: flex; gap: 6mm; margin-top: 5mm; }
+  .stats div { flex: 1; background: #faf7f2; border: 1px solid #e2d5c2; border-radius: 6px; padding: 3mm; text-align: center; }
+  .stats .n { font-size: 15pt; font-weight: 700; color: #8a6229; font-family: Consolas, monospace; }
+  .stats .l { font-size: 7.5pt; color: #666; text-transform: uppercase; letter-spacing: .05em; margin-top: .5mm; }
+
+  .digital { border: 2px solid #8a6229; background: #fdf6ec; border-radius: 6px; padding: 4.5mm 5.5mm; margin-top: 6mm; page-break-inside: avoid; }
+  .digital h2 { border-bottom: none; color: #8a6229; margin: 0 0 2.5mm; font-size: 12pt; page-break-before: auto; page-break-after: avoid; }
+  .digital p { font-size: 9.6pt; margin-bottom: 2mm; }
+  .digital .url { font-family: Consolas, monospace; font-weight: 700; font-size: 10.5pt; color: #1b1b1b; word-break: break-all; }
+
+  .lead { font-size: 10.6pt; }
+  .duas { columns: 2; column-gap: 9mm; }
+  .duas p { break-inside: avoid-column; }
+
+  .impact { border-left: 3px solid #8a6229; padding: 2.5mm 3mm; margin-bottom: 3.5mm; page-break-inside: avoid; background: #faf7f2; }
+  .impact h3 { margin: 0 0 1mm; font-size: 10.3pt; color: #000; }
+  .impact p { font-size: 9.5pt; margin-bottom: 0; }
+
+  .job { border-left: 3px solid #e2d5c2; padding-left: 4mm; margin-bottom: 4mm; page-break-inside: avoid; }
+  .job .head { display: flex; justify-content: space-between; align-items: baseline; gap: 6mm; }
+  .job .head h3 { margin: 0; font-size: 10.8pt; }
+  .job .when { font-family: Consolas, monospace; font-size: 8.5pt; color: #8a6229; white-space: nowrap; }
+  .job .where { font-size: 9pt; color: #666; font-style: italic; margin-bottom: 1.5mm; }
+  .job ul { list-style: none; margin: 1mm 0 0 0; }
+  .job ul li { position: relative; padding-left: 4mm; margin-bottom: .8mm; font-size: 9.4pt; color: #444; }
+  .job ul li::before { content: '—'; position: absolute; left: 0; color: #8a6229; }
+
+  .video { border-left: 3px solid #8a6229; padding: 2.5mm 3mm; margin-bottom: 3mm; page-break-inside: avoid; background: #faf7f2; }
+  .video h3 { margin: 0 0 1mm; font-size: 10.3pt; }
+  .video p { font-size: 9.5pt; margin-bottom: 0; }
+
+  .nota { background: #faf7f2; border: 1px solid #e2d5c2; border-radius: 4px; padding: 3mm 4mm; font-size: 9.2pt; margin: 4mm 0; page-break-inside: avoid; }
+  .footer { margin-top: 8mm; padding-top: 3mm; border-top: 1px solid #ccc; font-size: 8.3pt; color: #777; text-align: center; }
+</style>
+</head>
+<body>
+
+<!-- CAPA -->
+<div class="capa">
+  <div class="foto">
+    <img src="assets/profile_photo.jpg" alt="Marcelo Henrique Puschnick">
+    <div class="contato">
+      (19) 99946-2258<br>
+      marcelo_puschnick@icloud.com<br>
+      github.com/marcelopuschnick<br>
+      Campinas, SP
+    </div>
+  </div>
+  <div class="txt">
+    <span class="badge">CNPEM · Vaga 430554 · Analista de Comunicação Interna Jr. — Produção Audiovisual</span>
+    <h1>Marcelo Henrique Puschnick</h1>
+    <p class="lead">
+      23 anos de audiovisual — e o objetivo de estudar e trabalhar no mesmo lugar, de novo:
+      <strong>o CNPEM</strong>.
+    </p>
+    <p>
+      Editor e diretor de imagens · 5 anos de comunicação interna para a Bosch dentro da TV PUC ·
+      3.071 peças coordenadas em pós-produção · Python no dia a dia para facilitar o que seria manual.
+    </p>
+    <div class="stats">
+      <div><div class="n">23</div><div class="l">anos de audiovisual</div></div>
+      <div><div class="n">5</div><div class="l">anos na TV PUC</div></div>
+      <div><div class="n">3.071</div><div class="l">peças finalizadas</div></div>
+      <div><div class="n">8</div><div class="l">peças na seleção ao lado</div></div>
+    </div>
+    <div class="digital">
+      <h2>Portfólio digital — o que reúne mais detalhes</h2>
+      <p>Esta é a versão em PDF da proposta. A <strong>versão online</strong> reúne o que um PDF não mostra:
+         os <strong>vídeos do memorial da TV PUC</strong> (especiais de Natal, coral, o 15 anos), a
+         <strong>seleção de 8 peças</strong> (TV pública, TV universitária, educação médica e formatos
+         autorais), o <strong>detalhamento das 9 atividades da vaga</strong> e os <strong>repositórios
+         abertos e documentados</strong> da automação.</p>
+      <p>Link direto: <span class="url">https://marcelopuschnick.github.io/cnpem/</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- O CAMINHO -->
+<h2>O caminho — estudar e trabalhar no mesmo lugar, três vezes</h2>
+<div class="duas">
+  <p>
+    A primeira casa do ofício veio antes da faculdade: vendi equipamentos de iluminação cênica na
+    <strong>Comerciall, em São Paulo</strong> — a empresa que me acolheu primeiro e está comigo até hoje.
+    Depois, as <strong>Faculdades Oswaldo Cruz</strong>: funcionário e estudante ao mesmo tempo —
+    Comunicação Social com a bolsa de funcionário, trabalhando no laboratório de comunicação, no suporte
+    aos projetos dos alunos que usavam os estúdios. Formei-me em dezembro de 2003.
+  </p>
+  <p>
+    Dali, saí para estagiar em produção na <strong>TV Cultura</strong> — e pela Rede Empresa vieram os
+    projetos institucionais: Secretaria da Cultura, SEBRAE-SP, a cobertura da visita do Fome Zero à Ford
+    em 2003. Instituição, pauta e público — o regime que uma casa de ciência como o CNPEM vive todos os dias.
+  </p>
+  <p>
+    Na sequência, a temporada de <strong>Artes Visuais na Belas Artes, em São Paulo</strong> — que deixei
+    pelo convite do Lado H, na Fashion TV.
+  </p>
+  <p>
+    E então os cinco anos na <strong>TV PUC</strong>: comunicação interna para a Bosch (entrada pelo projeto
+    Bosch + PUC), o programa Fique Ligado produzido por alunos de jornalismo sob minha edição, os eventos da
+    universidade — e o curso de Jogos Digitais, onde comecei a estudar programação de verdade. Sigo estudando.
+  </p>
+  <p>
+    Jornalismo diário na TV Câmara, Rede Família e Band. E a agência: 3.071 peças coordenadas, com a Aristo,
+    a Primum e o CBI Miami no mesmo período.
+  </p>
+  <p>
+    No meio do caminho, a programação virou ferramenta: Python no dia a dia para facilitar o que seria
+    manual. E os períodos têm espaços entre si — a rotina de quem trabalha por projeto. Mas a costura nunca
+    se rompeu: emissoras, produtoras, agências — o mesmo ofício em todas as casas.
+  </p>
+  <p>
+    E a raiz do conhecimento livre vem de mais longe: a <strong>Casa de Cultura Tainá</strong>, que eu
+    frequentava na juventude — oficinas de música, tambores de aço, Pontos de Cultura no tempo do Gil. Ali a
+    cultura sobrevivia compartilhando o pouco que tinha — e foi ali que aprendi a lógica que guio até hoje:
+    conhecimento acolhido volta em conhecimento livre.
+  </p>
+</div>
+
+<!-- IMPACTOS -->
+<h2>Impactos — os números e os lugares</h2>
+<div class="duas">
+  <div class="impact">
+    <h3>📺 TV Cultura — onde tudo começou</h3>
+    <p>Estágio em produção na Rede Empresa da TV Cultura, atendendo demandas institucionais de órgãos
+       públicos — a semente de todos os caminhos que vieram depois, até a proposta de voltar a uma
+       instituição.</p>
+  </div>
+  <div class="impact">
+    <h3>🎓 Bosch + PUC — comunicação interna</h3>
+    <p>5 anos produzindo comunicação interna para a Bosch Campinas, dentro da TV PUC — entrada na casa pelo
+       projeto Bosch + PUC, com conteúdo produzido por alunos da universidade e pago pela empresa. O escopo
+       exato desta vaga, em outro campus.</p>
+  </div>
+  <div class="impact">
+    <h3>🏥 Aristo Residência Médica</h3>
+    <p>3 anos como editor atendendo três instituições de ensino para medicina, cursos preparatórios e
+       pós-graduação — edição técnica de conteúdos educacionais de alta complexidade, com alto engajamento e
+       métricas de retenção nas campanhas.</p>
+  </div>
+  <div class="impact">
+    <h3>🎬 Gestão e padronização de acervo em grande escala</h3>
+    <p>3.071 peças coordenadas em pós-produção, com padronização de entregas, acervo versionado e fluxo
+       documentado — organização sustentando volume.</p>
+  </div>
+  <div class="impact">
+    <h3>🌊 Hospital do Amor — Barretos</h3>
+    <p>Cobertura em tempo real do Lago do Amor: lives diárias com 3 câmeras e mais de 50 peças verticais —
+       comunicação de propósito social, em regime de tempo real.</p>
+  </div>
+  <div class="impact">
+    <h3>🏅 Prêmio FEAC de Jornalismo — 2015</h3>
+    <p>Finalista, modalidade Cinegrafista, do 18º Prêmio Fundação FEAC de Jornalismo, pela TV PUC, com a
+       reportagem "Multiplicando sonhos, transformando realidades" — entre 186 trabalhos inscritos. Projeto
+       documentado: multiplicandosonhos.com.br</p>
+  </div>
+</div>
+
+<!-- TECNOLOGIA -->
+<h2>No meio do caminho, a tecnologia — como conhecimento, não como produto</h2>
+<div class="duas">
+  <p>
+    A mesma lógica da Casa de Cultura: quem aprende, devolve. Nos últimos anos me aproximei de Python e
+    construí, sozinho e com recurso próprio, uma automação que facilita o meu fluxo de editor — organização
+    de material, tarefas repetitivas e rotinas de produção resolvidas no computador. Não é produto, não tem
+    venda e não substitui a função: é conhecimento que carrego — e que cabe na rotina de qualquer equipe de
+    comunicação. Os repositórios estão no ar, com documentação e explicativos: github.com/marcelopuschnick
+  </p>
+</div>
+
+<!-- POR QUE O CNPEM -->
+<h2>Por que o CNPEM</h2>
+<div class="duas">
+  <p>
+    Eu conheço o Sirius — a maior infraestrutura científica já construída no Brasil — e sei que o CNPEM é a
+    Organização Social do MCTI responsável por ele, pelo projeto Orion, por quatro laboratórios nacionais
+    (LNNano, LNBio, LNBR e LNLS) e pela Ilum Escola de Ciência. O que me interessa é traduzir essa produção
+    para o público interno: mostrar para quem trabalha na casa o que está sendo construído ao lado.
+  </p>
+  <p>
+    A formação que eu tenho: Comunicação Social — Rádio e TV (Oswaldo Cruz, 2003). E duas graduações que o
+    trabalho interrompeu no meio: Artes Visuais na Belas Artes de SP — que deixei pelo convite do Lado H —
+    e Tecnologia em Jogos Digitais na PUC-Campinas, cursada já como funcionário da TV PUC, onde comecei a
+    estudar programação de verdade (sigo estudando). Ciência de Dados (IE University) e a automação que eu
+    mesmo construí completam o quadro. Ciência, tecnologia e comunicação — as três juntas, é o que esta
+    vaga pede.
+  </p>
+  <p>
+    A jornada pessoal, dita de frente: o que eu procuro agora é o trabalho fixo — a base estável para
+    continuar estudando. O plano é <strong>Engenharia de Software na PUC-Campinas</strong>; e o ecossistema
+    oferece outros caminhos alinhados: <strong>Análise e Desenvolvimento de Sistemas na FATEC Campinas</strong>
+    (noturno, pública) e os cursos de extensão do Instituto de Computação da Unicamp — que fica ao lado do
+    CNPEM, em Barão Geraldo. Cada opção converge para o mesmo destino: a função dentro da casa, cada vez
+    mais qualificada.
+  </p>
+  <p>
+    E, para ser honesto até o fim: fazer parte de uma instituição de ciência deste Brasil — casa de
+    desenvolvimento coletivo, informação e produção de conhecimento — <strong>seria uma honra</strong>, não
+    apenas um emprego.
+  </p>
+</div>
+
+<!-- TRABALHOS -->
+<h2>Trabalhos — seleção de projetos e funções</h2>
+<div class="duas">
+
+  <div class="job">
+    <div class="head"><h3>Comunicação Interna — Bosch Campinas</h3><span class="when">TV PUC · 2012–2017</span></div>
+    <div class="where">PUC-Campinas — TV PUC Campinas · entrada pela casa pelo projeto Bosch + PUC</div>
+    <ul>
+      <li>Produção de comunicação interna para a Bosch Campinas dentro da TV PUC</li>
+      <li>Edição, direção de imagens e finalização do programa Fique Ligado, produzido por alunos de
+          jornalismo</li>
+      <li>Cobertura de eventos da universidade — Mostra de Profissões, eventos recebidos, atividades com
+          alunos</li>
+      <li>Edição e finalização de matérias, boletins e artes; montagem e finalização de programas
+          institucionais</li>
+      <li>Direção de imagens e coordenação de equipe de cinegrafistas</li>
+      <li>Desenvolvimento de esquemas luminotécnicos e elaboração de formatos e narrativas audiovisuais</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="head"><h3>Projetos institucionais e governamentais</h3><span class="when">TV PUC / TV Cultura</span></div>
+    <div class="where">Rede Empresa da TV Cultura · PUC-Campinas</div>
+    <ul>
+      <li>SEBRAE-SP e Secretaria da Cultura — produção de conteúdo institucional</li>
+      <li>TJFRAN — produção institucional</li>
+      <li>Cobertura da visita presidencial do programa Fome Zero à fábrica da Ford (2003)</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="head"><h3>Jornalismo diário — edição e direção de imagens</h3><span class="when">2018–2020</span></div>
+    <div class="where">TV Câmara Campinas · Rede Família de Televisão · Band Campinas</div>
+    <ul>
+      <li>TV Câmara Campinas (2018–2020) — edição e finalização de matérias, boletins e artes; pacotes
+          gráficos, vinhetas e arte; direção de imagens para o jornal</li>
+      <li>Rede Família de Televisão (2019–2020) — edição e finalização de matérias e boletins para o
+          departamento de jornalismo; montagem e finalização de programas</li>
+      <li>Rádio e TV Bandeirantes (2020) — montagem dos blocos dos programas eleitorais; edição e
+          finalização de VTs, boletins e artes; envio e cadastro no exibidor</li>
+      <li>Cobertura do show do Sepultura em Campinas: entrevista com a banda no hotel antes do evento,
+          imagens gravadas por mim — eu apareço na reportagem —, edição depois para o programa Conexão e
+          trecho exibido no jornal (23/03/2020)</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="head"><h3>Produção integral de programa — Lado H / Fashion TV</h3><span class="when">2010 · 3 temporadas</span></div>
+    <div class="where">MZ Filmes — São Paulo, SP</div>
+    <ul>
+      <li>Orçamento, pauta e definição de personagens</li>
+      <li>Locação, infraestrutura e contratação de equipe</li>
+      <li>Especificação e contratação de equipamentos</li>
+      <li>Produção, pós-produção e finalização</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="head"><h3>Conteúdo educacional — Núcleo de EAD</h3><span class="when">2011–2012</span></div>
+    <div class="where">TV Século XXI — Valinhos, SP</div>
+    <ul>
+      <li>Gravação de áudio e vídeo em internas e externas</li>
+      <li>Produção de cenário, locação e iluminação</li>
+      <li>Operação de microfones e fontes sonoras</li>
+      <li>Edição, finalização e direção de imagens</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="head"><h3>Gestão e padronização de acervo em grande escala</h3><span class="when">2021–atual</span></div>
+    <div class="where">Agência de Campinas — nome completo no currículo</div>
+    <ul>
+      <li>Produção e pós-produção de conteúdo para clientes institucionais da agência</li>
+      <li>Coordenação de pós-produção em volume: 3.071 peças finalizadas</li>
+      <li>Padronização de entregas, organização de acervo e gestão de mídias digitais</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="head"><h3>Cobertura em tempo real — Hospital do Amor, Barretos</h3><span class="when">Projeto social</span></div>
+    <div class="where">Cobertura para Instagram · produção imersiva</div>
+    <ul>
+      <li>Reality show imersivo: 3.000 m² de barro em lago biológico, construído em 10 dias</li>
+      <li>Cobertura em tempo real para o Instagram durante toda a ação</li>
+      <li>Lives diárias com 3 câmeras e mais de 50 peças verticais publicadas</li>
+    </ul>
+  </div>
+
+</div>
+
+<!-- POR QUE CNPEM / HONRA -->
+<h2>Sobre a formação — e a honra</h2>
+<div class="duas">
+  <p>
+    A formação que eu tenho: Comunicação Social — Rádio e TV (Oswaldo Cruz, 2003). E duas graduações que o
+    trabalho interrompeu no meio: <strong>Artes Visuais na Belas Artes de SP</strong> — que deixei pelo
+    convite do Lado H, na Fashion TV — e <strong>Tecnologia em Jogos Digitais na PUC-Campinas</strong>,
+    cursada já como funcionário da TV PUC, onde comecei a estudar programação de verdade (sigo estudando).
+    Ciência de Dados (IE University) e a automação que eu mesmo construí completam o quadro.
+  </p>
+  <p>
+    E, para ser honesto até o fim: fazer parte de uma instituição de ciência deste Brasil — casa de
+    desenvolvimento coletivo, informação e produção de conhecimento — <strong>seria uma honra</strong>, não
+    apenas um emprego.
+  </p>
+</div>
+
+<!-- CONTATO -->
+<div class="nota" style="text-align: center;">
+  <strong>Contato:</strong> (19) 99946-2258 · marcelo_puschnick@icloud.com · github.com/marcelopuschnick ·
+  Portfólio online: https://marcelopuschnick.github.io/cnpem/ · Campinas, SP ·
+  candidatura registrada na Gupy (vaga 430554) · disponibilidade integral
+</div>
+
+</body>
+</html>
